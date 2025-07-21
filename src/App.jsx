@@ -10,8 +10,10 @@ function App() {
 
 return (
  <React.Fragment>
+  <Home/>
      <h2 className="bg-danger">Ahmed </h2>
      <i class="fa-solid fa-house"></i>
+     <About/>
  </React.Fragment>
   )
 }
