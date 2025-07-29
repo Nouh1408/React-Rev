@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ChildComponent from '../ChildComponent/ChildComponent.jsx'
 
 export default function Content() {
     const [product, setProduct]= useState({
@@ -15,11 +16,7 @@ export default function Content() {
         <div className="row p-2">
             <div className="col-md-4">
                 <div className="card rounded-2 rounded-bottom-4">
-                    <h4>{product.name}</h4>
-                    <h4>{product.price}</h4>
-                    <h4>{product.category}</h4>
-                    <h4>{product.onSale}</h4>
-                    <button className='btn btn-danger rounded-4 '>Delete</button>
+                    <ChildComponent name={product.name} price={product.price} category={product.category} onsale = {product.onSale}/>
                 </div>
             </div>
         </div>
