@@ -7,22 +7,14 @@ export default function About() {
     price: 100,
     onSale: false,
   };
+ 
 
-  const course2 = {
-    name: "Pathology",
-    price: 200,
-    onSale: true,
-  };
-  const [course, setCourse] = useState(course1);
+  
 
   function increment() {
     setCounter(counter + 1);
   }
- function ChangeCourse() {
-    setCourse((prevCourse) =>
-      prevCourse.name === "Cardiology" ? course2 : course1
-    );
-  }
+
 
   return (
     <div className="bg-warning">
@@ -34,11 +26,11 @@ export default function About() {
         saepe.
       </p>
       <ul>
-        <li>CourseName: {course.name}</li>
-        <li>{course.price}</li>
-        <li>OnSale: {course.onSale ? "true" : "false"}</li>
+        <li>CourseName: {course1.name}</li>
+        <li>{course1.price}</li>
+        <li>OnSale: {course1.onSale ? "true" : "false"}</li>
       </ul>
-      <button onClick={ChangeCourse}>Change Course</button>
+      
 
     </div>
   );

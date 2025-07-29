@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function ChildComponent({name, price, category, onsale}) {
+export default function ChildComponent({ProductFromparent}) {
   return (
     <div>
-      <h4>{name}</h4>
-      <h4>{price}</h4>
-      <h4>{category}</h4>
-      <h4>{onsale ? "in Stock":"Out of Stock"}</h4>
+      <h4>{ProductFromparent.name}</h4>
+      <h4>{ProductFromparent.price}</h4>
+      <h4>{ProductFromparent.category}</h4>
+      <h4>{ProductFromparent.onsale ? "in Stock":"Out of Stock"}</h4>
       
       <button className="btn btn-danger rounded-4 ">Delete</button>
     </div>
