@@ -6,12 +6,14 @@ export default function Home() {
   function changeCounter() {
     setCounter(count + 1);
   }
-useEffect(() => {
-  const timer = setTimeout(() => {
-    setShowcard(true);
-  }, 2000);
-  return () => clearTimeout(timer);
-}, []);
+useEffect(()=>{
+  console.log("mounted");
+  return ()=>{
+    console.log("Unmounted");
+    
+  }
+  
+})
 
 return (
     <div className="bg-light">
