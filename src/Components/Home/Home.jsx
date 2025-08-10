@@ -6,34 +6,27 @@ export default function Home() {
   function changeCounter() {
     setCounter(count + 1);
   }
-useEffect(()=>{
+/* useEffect(()=>{
   console.log("mounted");
   return ()=>{
     console.log("Unmounted");
     
   }
   
-})
+}) */
+
+useEffect(()=>{
+  if(count==0) return
+  console.log("Countrer Change");
+  
+},[count])
 
 return (
     <div className="bg-light">
       <h1>Home Page</h1>
       <p className={count > 5 ? `bg-danger` : `bg-info`}>count: {count}</p>
-      <button onClick={changeCounter}>click to increment</button>
-      {showCard && (
-        <div className="card" style={{ width: "18rem" }}>
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
-            </a>
-          </div>
-        </div>
-      )}
+      <button className="btn btn-outline-info" onClick={changeCounter}>click to increment</button>
+      
     </div>
   );
 }
