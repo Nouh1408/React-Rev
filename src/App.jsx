@@ -7,16 +7,19 @@ import React from "react";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Components/Layout/Layout.jsx";
+import Contact from "./Components/Contact/Contact.jsx";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "",
       element: <Layout />,
-      errorElement:<Error/>,
+      // errorElement:<Error/>,
       children: [
         { index:true, element: <Home /> }, //this is the start -- default
         { path: "about", element: <About /> },
+        {path:"contact", element:<Contact/>},
+        {path:"*",element:<Error/>}
       ],
     },
   ]);
