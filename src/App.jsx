@@ -1,27 +1,28 @@
-import Home from "./Components/Home/Home"
+import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
 
 import React from "react";
 
-import Navbar from "./Components/Navbar/Navbar.jsx";
-import { RouterProvider,createBrowserRouter } from "react-router-dom";
 
-
-
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Layout from "./Components/Layout/Layout.jsx";
 
 function App() {
-  
-
-return (
- <React.Fragment>
-  <RouterProvider router={
-    createBrowserRouter([
-      {path:"home", element:<Home/>},
-      {path:"about", element:<About/>}
-    ])
-  }/>
-     
- </React.Fragment>
-  )
+  const router = createBrowserRouter([
+    {
+      path: "",
+      element: <Layout />,
+      children: [
+        { index:true, element: <Home /> }, //this is the start -- default
+        { path: "about", element: <About /> },
+      ],
+    },
+  ]);
+  return (
+    <React.Fragment>
+      <RouterProvider router={router} />
+    </React.Fragment>
+  );
 }
 
-export default App 
+export default App;
