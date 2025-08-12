@@ -1,5 +1,6 @@
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
+import Error from "./Components/Error/Error.jsx";
 
 import React from "react";
 
@@ -12,6 +13,7 @@ function App() {
     {
       path: "",
       element: <Layout />,
+      errorElement:<Error/>,
       children: [
         { index:true, element: <Home /> }, //this is the start -- default
         { path: "about", element: <About /> },
