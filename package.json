@@ -8,21 +8,20 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
-    
   },
   "useState": {
-  "prefix": "useState",
-  "body": [
-    "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);"
-  ],
-  "description": "useState with proper camel casing for setter function name."
-},
-
+    "prefix": "useState",
+    "body": [
+      "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState($2);"
+    ],
+    "description": "useState with proper camel casing for setter function name."
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "bootstrap": "^5.3.7",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.8.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
