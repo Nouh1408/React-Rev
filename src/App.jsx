@@ -1,13 +1,11 @@
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Error from "./Components/Error/Error.jsx";
-
-import React from "react";
-
-
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Components/Layout/Layout.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
+import React from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
 
 function App() {
   const router = createBrowserRouter([
