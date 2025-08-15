@@ -25,6 +25,12 @@ export default function Posts() {
         setIsLoading(false)
         }
     }
+    if(isLoading){
+      return <p>loading ....</p>
+    }
+    if(error){
+      return <p>try later</p>
+    }
   return (
     <div>
         <h1>Posts Page</h1>

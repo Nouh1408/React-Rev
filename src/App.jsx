@@ -6,6 +6,7 @@ import Contact from "./Components/Contact/Contact.jsx";
 import Posts from './Components/Posts/Posts.jsx'
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import PostDetails from "./Components/PostDetails/PostDetails.jsx";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         { path: "about", element: <About /> },
         {path:"contact", element:<Contact/>},
         {path:"posts", element:<Posts/>},
+        {path:"details", element:<PostDetails/>},
         {path:"*",element:<Error/>}
       ],
     },
