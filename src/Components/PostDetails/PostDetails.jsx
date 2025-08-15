@@ -1,19 +1,24 @@
 import axios from 'axios'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 export default function PostDetails() {
+
+    const {id} =useParams()
+    
+
     const [post, setPost] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(null)
 
     useEffect(()=>{
-        getData()
-    },[])
+        getData(id)
+    },[id])
 
-    async function getData(){
+    async function getData(id){
       setIsLoading(true)
         try {
-        const {data} = await axios.get("https://jsonplaceholder.typicode.com/posts/3")
+        const {data} = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
 
         setPost(data)
         } catch (error) {

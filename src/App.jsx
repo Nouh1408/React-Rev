@@ -20,7 +20,7 @@ function App() {
         { path: "about", element: <About /> },
         {path:"contact", element:<Contact/>},
         {path:"posts", element:<Posts/>},
-        {path:"details", element:<PostDetails/>},
+        {path:"details/:id", element:<PostDetails/>},
         {path:"*",element:<Error/>}
       ],
     },

@@ -6,7 +6,7 @@ export default function Card({p}) {
     <div className="inner bg-danger g-4 mb-2 text-center">
       <h2>{p.title.split(" ", 3).join(" ")}</h2>
       <p>{p.body.split(" ", 10).join(" ")}</p>
-      <Link to={"/details"} className="btn btn-info ">view details</Link>
+      <Link to={`/details/${p.id}`} className="btn btn-info ">view details</Link>
     </div>
   );
 }
