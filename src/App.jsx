@@ -3,7 +3,7 @@ import About from "./Components/About/About";
 import Error from "./Components/Error/Error.jsx";
 import Layout from "./Components/Layout/Layout.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
-import Posts from './Components/Posts/posts.jsx'
+import Posts from './Components/Posts/Posts.jsx'
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 

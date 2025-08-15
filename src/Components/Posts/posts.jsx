@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Card from '../Card/Card.jsx'
 
 
 
-export default function posts() {
+export default function Posts() {
 
     const [posts,setPosts] = useState([])
     const [isLoading, setIsLoading] = useState(false)
@@ -34,11 +35,7 @@ export default function posts() {
               posts.map((p)=>{
                 return(
                 <div key={p.id} className="col-md-4">
-                <div  className="inner bg-danger g-4 mb-2 text-center">
-                  <h2>{p.title.split(" ",3).join(" ")}</h2>
-                  <p>{p.body.split(" ",10).join(" ")}</p>
-                  <button className='btn btn-info '>view details</button>
-                </div>
+                <Card p={p} />
                 </div>
                 )
               })
