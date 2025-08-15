@@ -18,10 +18,18 @@ export default function Home() {
 }) */
 
 useEffect(()=>{
-  if(count==0) return
-  console.log("Countrer Change");
+  console.log("mounting");
+  return()=>{
+    console.log("bye");
+    
+  }
   
-},[count])
+},[])
+useEffect(() => {
+  if(count == 0) return
+  console.log("counter change");
+}, [count])
+
 
 return (
     <div className="bg-light">
