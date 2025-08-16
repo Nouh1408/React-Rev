@@ -37,7 +37,10 @@ export default function PostDetails() {
   return (
     <div>
       <h2>post details</h2>
-      <Link to={`/details/${Number(id)+1}`} className='btn btn-outline-danger'>Next Post</Link>
+      <div>
+        <Link to={`/details/${Number(id)+1}`} className='btn btn-outline-danger'>Next Post</Link>
+        <Link to={`/details/${Number(id)-1}`} className='btn btn-outline-info'>Previous Post</Link>
+      </div>
       <p>{post?.title}</p>
     </div>
   )
