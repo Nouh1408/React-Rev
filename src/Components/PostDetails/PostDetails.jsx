@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 export default function PostDetails() {
 
@@ -37,6 +37,7 @@ export default function PostDetails() {
   return (
     <div>
       <h2>post details</h2>
+      <Link to={`/details/${Number(id)+1}`} className='btn btn-outline-danger'>Next Post</Link>
       <p>{post?.title}</p>
     </div>
   )
